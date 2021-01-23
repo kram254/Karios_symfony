@@ -1,0 +1,27 @@
+{% extends'base.html.twig' %}
+
+{% block title %}
+Question: {{ question }}
+{% endblock %}
+
+{% block body %}
+<h1>{{ question }}</h1>
+
+{# It's just a comment area nothing to see here so move along... #}
+
+<div>
+    We'll print some of the questions here later...
+</div>
+
+<h2>Answers({{ answers|length }})</h2>
+
+{#
+    {{ answer }}----> this is an array
+We are going to loop over the array and print each individual answer...
+ #}
+<ul>
+{% for answer in answers %}
+    <li>{{ answer }}</li>
+{% endfor %}
+</ul>
+{% endblock %}
